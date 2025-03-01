@@ -3,31 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- Load Tailwind first, then DaisyUI -->
+    <title>Tailwind Sidebar Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind & DaisyUI -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="bg-[#F4F7FF] min-h-screen">
+<body class="font-[Poppins]">
 
-     <header class="md:px-[75px] px-5 md:mt-8 mt-4">
-        <nav class="flex justify-between bg-[#FFFFFF] rounded-[16px] px-6 shadow-md">
-            <div class="flex items-center">
-                <img class="md:w-10 w-6 md:h-10 h-6" src="assets/logo.png" alt="">
-                <h1 class="md:text-[35px] text-[20px]">Dev<span class="font-extrabold">Board</span></h1>
-            </div>
-            <div class="flex gap-5">
-                <div class="flex rounded-[30px] bg-[#F4F7FF] items-center gap-4 p-2">
-                    <img src="assets/checkbox.png" alt="" class="w-5 h-5">
-                    <span class="font-bold md:text-[30px] text-[20px]">23</span>
-                </div>
-                <button>
-                    <img src="assets/theme-btn.png" alt="" class="w-6 h-6 sm:w-8 sm:h-8">
-                </button>
-            </div>
-        </nav>
-     </header>
+    <div class="grid h-screen grid-cols-[200px_1fr] grid-rows-[80px_1fr_50px] gap-2 
+                [grid-template-areas:'header_header'_'sidebar_main'_'footer_footer']
+                md:grid-cols-1 md:[grid-template-areas:'header'_'main'_'sidebar'_'footer']">
+        
+        <header class="bg-blue-500 p-4 text-white [grid-area:header]">Header</header>
+        <aside class="bg-gray-800 text-white p-4 [grid-area:sidebar] md:hidden">Sidebar</aside>
+        <main class="bg-green-300 p-4 [grid-area:main]">Main Content</main>
+        <footer class="bg-gray-600 p-4 text-white [grid-area:footer]">Footer</footer>
+    </div>
 
 </body>
 </html>
