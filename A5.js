@@ -1,3 +1,6 @@
+// resent-time
+
+    // 6btn clik and work
 document.getElementById("clear").addEventListener("click", function () {
     document.getElementById("hidden").style.display = "none";
 })
@@ -72,28 +75,4 @@ document.getElementById("next-page").addEventListener("click", function(){
 document.getElementById("previous-page").addEventListener("click", function(){
     window.history.back('index.html');
 });
-
-                                            // update date
-
-                                            // const btn = document.getElementById("btn6");
-                                            // const message = document.getElementById("message");
-                                    
-                                            // btn.addEventListener("click", function () {
-                                            //     const title = "Improve Job Searching";
-                                            //     const realTime = new Date().toLocaleTimeString();
-                                    
-                                            //     const div = document.createElement("div");
-                                            //     div.classList.add("bg-[#3751fd13]", "p-2", "mb-4", "rounded-lg");
-                                            //     div.innerHTML = `
-                                            //         <p class="text-sm">You have completed task "${title}" at <span class="realTime">${realTime}</span></p>
-                                            //     `;
-                                    
-                                            //     message.appendChild(div);
-                                            // });
-                                    
-                                            // // Clear history
-                                            // const clearHistory = document.getElementById("clear");
-                                            // clearHistory.addEventListener("click", function () {
-                                            //     message.innerHTML = "";
-                                            // });
 

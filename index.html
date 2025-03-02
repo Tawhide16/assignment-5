@@ -219,22 +219,22 @@
             <hr class="border-dashed mt-3">
             <div id="hidden" class="">
                 <h1 id="comment1" class="hidden bg-[#F4F7FF] mt-4 rounded-xl inline-block font-normal text-[12px] p-[10px] ">You have
-                    Complete The Task <br> Add Dark Mode at 12:48:15 PM</h1>
+                    Complete The Task <br> Add Dark Mode at <p class="current-time"></p> </h1>
             
                 <h1 id="comment2" class="hidden bg-[#F4F7FF] mt-4 rounded-xl inline-block font-normal text-[12px] p-[10px]">You have Complete
-                    The Task <br> Add Dark Mode at 12:48:15 PM</h1>
+                    The Task <br> Add Dark Mode at <p class="current-time"></p> </h1>
 
                 <h1 id="comment3" class="hidden bg-[#F4F7FF] mt-4 rounded-xl inline-block font-normal text-[12px] p-[10px]">You have Complete
-                    The Task <br> Add Dark Mode at 12:48:15 PM</h1>
+                    The Task <br> Add Dark Mode at <p class="current-time"></p></h1>
 
                 <h1 id="comment4" class="hidden bg-[#F4F7FF] mt-4 rounded-xl inline-block font-normal text-[12px] p-[10px]">You have Complete
-                    The Task <br> Add Dark Mode at 12:48:15 PM</h1>
+                    The Task <br> Add Dark Mode at<p class="current-time"></p></h1>
 
                 <h1 id="comment5" class="hidden bg-[#F4F7FF] mt-4 rounded-xl inline-block font-normal text-[12px] p-[10px]">You have Complete
-                    The Task <br> Add Dark Mode at 12:48:15 PM</h1>
+                    The Task <br> Add Dark Mode at <p class="current-time"></p></h1>
 
                 <h1 id="comment6" class="hidden bg-[#F4F7FF] mt-4 rounded-xl inline-block font-normal text-[12px] p-[10px]">You have Complete
-                    The Task <br> Add Dark Mode at 12:48:15 PM</h1>
+                    The Task <br> Add Dark Mode at <p class="current-time"></p></h1>
             </div>
 
                                      <!-- history section -->
@@ -245,7 +245,28 @@
 
         </main>
     </section>
+   
+    <script>
+        // This function updates both the time and the date with a clean format
+        function updateTime() {
+    const currentDate = new Date();
+    const options = { hour: '2-digit', minute: '2-digit' };
+    const formattedDate = currentDate.toLocaleTimeString('en-US', options);
 
+    // Select all elements with the class 'current-time'
+    const timeElements = document.querySelectorAll('.current-time');
+
+    // Loop through all selected elements and update their innerHTML
+    timeElements.forEach(element => {
+        element.innerHTML = formattedDate;
+    });
+}
+
+// Update time every second
+setInterval(updateTime, 1000);
+updateTime();  // Initial call to show time immediately
+
+    </script>
     <script>
         function updateTime() {
     const currentDate = new Date();
@@ -256,7 +277,9 @@
 
     setInterval(updateTime, 1000);
     updateTime();
-    </script>
+    </script> 
+   
+ 
     <script src="A5.js"></script>
 </body>
 

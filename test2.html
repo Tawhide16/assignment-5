@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F4F7FF] poppins-thin ">
+
+    <header class="md:px-[69px] px-5 pt-8">
+        <!-- nav-bar -->
+        <nav class="flex justify-between bg-[#FFFFFF] rounded-[16px] px-8 shadow-md">
+            <div class="flex items-center">
+                <img class="md:w-10 w-6 md:h-10 h-6" src="assets/logo.png" alt="">
+                <h1 class="md:text-[35px] text-[20px]">Dev<span class="font-extrabold">Board</span></h1>
+            </div>
+
+            <div class="flex gap-5 p-3">
+                <div class="flex rounded-[30px] bg-[#F4F7FF] items-center gap-4 p-2">
+                    <img src="assets/checkbox.png" alt="" class="w-5 h-5  ">
+                    <span id="task2" class="font-bold md:text-[20px] text-[20px]">23</span>
+                </div>
+
+                <div id="ahh">
+                    <img id="non" src="./assets/theme-btn.png" alt="">
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- Time Section -->
+    <div class="flex items-center p-[20px] gap-4 bg-[#F4F7FF] rounded-2xl ml-3">
+        <div>
+            <a href="" class="bg-white rounded-[50px]"><img src="assets/calender.png" alt="" class="w-5 h-5"> </a>
+        </div>
+        <div class="items-center">
+            <p id="time" class="font-normal text-[16px]"></p> <!-- Time display here -->
+        </div>
+    </div>
+
+    <!-- Task List -->
+    <main class="bg-white grid grid-cols-3 gap-4 mt-5 px-4 ">
+
+        <!-- Task 1 -->
+        <div class="bg-[#F4F7FF] w-[300px] h-auto p-5 rounded-2xl poppins-thin">
+            <span class="bg-white rounded-xl text-[12px] font-normal px-4 py-2 mt-3">ShopEase</span>
+            <h1 class="font-bold text-[18px] mt-3 text-[#00303C]">Fix Mobile Button Issue </h1>
+            <p class="bg-white font-normal text-[12px] w-[250px] mt-3 rounded-lg p-4">Debug using Chrome DevTools, check for overlapping.....</p>
+            <hr class="border-dashed mt-3">
+            <div class="flex gap-6 mt-3">
+                <div>
+                    <p class="font-normal text-[14px]">Deadline</p>
+                    <h1 class="font-medium text-[16px] ">21 March 2025</h1>
+                </div>
+                <button id="btn1" class="btn btn-sm bg-[#3752FD] text-white hover:bg-[#3752FD]">Completed</button>
+            </div>
+        </div> 
+    </main>
+
+    <script>
+        // This function updates both the time and the date with a clean format
+        function updateTime() {
+            const currentDate = new Date();
+            const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+            const formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+            // Update the time on the page
+            document.getElementById('time').innerHTML = formattedDate;
+        }
+
+        // Update time every second
+        setInterval(updateTime, 1000);
+        updateTime();  // Initial call to show time immediately
+    </script>
+
+    <script src="A5.js"></script>
+</body>
+
+</html>
