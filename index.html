@@ -247,24 +247,20 @@
     </section>
    
     <script>
-        // This function updates both the time and the date with a clean format
+    
         function updateTime() {
     const currentDate = new Date();
     const options = { hour: '2-digit', minute: '2-digit' };
     const formattedDate = currentDate.toLocaleTimeString('en-US', options);
-
-    // Select all elements with the class 'current-time'
     const timeElements = document.querySelectorAll('.current-time');
 
-    // Loop through all selected elements and update their innerHTML
     timeElements.forEach(element => {
         element.innerHTML = formattedDate;
     });
 }
 
-// Update time every second
 setInterval(updateTime, 1000);
-updateTime();  // Initial call to show time immediately
+updateTime();  
 
     </script>
     <script>
