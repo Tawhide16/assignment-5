@@ -1,3 +1,25 @@
+document.getElementById("clear").addEventListener("click", function () {
+    document.getElementById("hidden").style.display = "none";
+})
+
+document.getElementById("btn1").addEventListener("click", function () {
+    document.getElementById("comment1").style.display = "block";
+});
+document.getElementById("btn2").addEventListener("click", function () {
+    document.getElementById("comment2").style.display = "block";
+});
+document.getElementById("btn3").addEventListener("click", function () {
+    document.getElementById("comment3").style.display = "block";
+});
+document.getElementById("btn4").addEventListener("click", function () {
+    document.getElementById("comment4").style.display = "block";
+});
+document.getElementById("btn5").addEventListener("click", function () {
+    document.getElementById("comment5").style.display = "block";
+});
+document.getElementById("btn6").addEventListener("click", function () {
+    document.getElementById("comment6").style.display = "block";
+});
 
 // 6btn clik and work
 function updateValues(button) {
@@ -52,4 +74,26 @@ document.getElementById("previous-page").addEventListener("click", function(){
 });
 
                                             // update date
+
+                                            // const btn = document.getElementById("btn6");
+                                            // const message = document.getElementById("message");
+                                    
+                                            // btn.addEventListener("click", function () {
+                                            //     const title = "Improve Job Searching";
+                                            //     const realTime = new Date().toLocaleTimeString();
+                                    
+                                            //     const div = document.createElement("div");
+                                            //     div.classList.add("bg-[#3751fd13]", "p-2", "mb-4", "rounded-lg");
+                                            //     div.innerHTML = `
+                                            //         <p class="text-sm">You have completed task "${title}" at <span class="realTime">${realTime}</span></p>
+                                            //     `;
+                                    
+                                            //     message.appendChild(div);
+                                            // });
+                                    
+                                            // // Clear history
+                                            // const clearHistory = document.getElementById("clear");
+                                            // clearHistory.addEventListener("click", function () {
+                                            //     message.innerHTML = "";
+                                            // });
 
