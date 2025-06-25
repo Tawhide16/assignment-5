@@ -30,7 +30,7 @@
 
 ## 📸 Screenshot
 
-![DevBoard Screenshot](./assets/screenshot.png)
+![DevBoard Screenshot](./assets/image5.png)
 
 > Replace this with your actual screenshot file path
 
